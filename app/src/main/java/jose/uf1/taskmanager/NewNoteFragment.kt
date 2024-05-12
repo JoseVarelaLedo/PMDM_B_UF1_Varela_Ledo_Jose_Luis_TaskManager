@@ -36,9 +36,11 @@ class NewNoteFragment : Fragment() {
                 val newNote = Note(title, description)
 
                 saveNoteToFile(requireContext(), newNote)
-                Snackbar.make(binding.root, "Nota guardada correctamente", Snackbar.LENGTH_SHORT).show()
+                val snackBar = Snackbar.make(binding.root, "Nota guardada correctamente", Snackbar.LENGTH_SHORT)
+                snackBar.setAnchorView(binding.editTextTitle)
+                snackBar.show()
             } else {
-                Snackbar.make(binding.root, "Por favor, completa todos los campos y selecciona una fecha", Snackbar.LENGTH_SHORT).show()
+                Snackbar.make(binding.root, "Por favor, completa todos los campos.", Snackbar.LENGTH_SHORT).show()
             }
         }
         return view

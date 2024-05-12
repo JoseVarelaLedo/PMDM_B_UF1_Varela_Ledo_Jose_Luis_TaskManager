@@ -10,7 +10,6 @@ import jose.uf1.taskmanager.databinding.FragmentWelcomeBinding
 
 class WelcomeFragment : Fragment() {
     private lateinit var binding: FragmentWelcomeBinding
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

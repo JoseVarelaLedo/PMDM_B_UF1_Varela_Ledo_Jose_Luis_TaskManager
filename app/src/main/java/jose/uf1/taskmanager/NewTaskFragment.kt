@@ -59,7 +59,6 @@ class NewTaskFragment : Fragment() {
     private fun showDatePickerDialog() {
         val datePicker = DatePickerDialog(requireContext())
         datePicker.setOnDateSetListener { _, year, month, dayOfMonth ->
-            // Obtener la fecha seleccionada y establecerla como la fecha límite
             val calendar = Calendar.getInstance()
             calendar.set(year, month, dayOfMonth)
             selectedDeadline = calendar.timeInMillis
@@ -88,5 +87,4 @@ class NewTaskFragment : Fragment() {
             emptyList()
         }
     }
-
 }

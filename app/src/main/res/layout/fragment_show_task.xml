@@ -50,5 +50,4 @@
         android:layout_height="wrap_content"
         android:text="@string/borrar_tarea"
         android:layout_gravity="center"/>
-
 </LinearLayout>

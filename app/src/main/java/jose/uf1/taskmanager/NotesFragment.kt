@@ -25,12 +25,10 @@ class NotesFragment : Fragment() {
     private lateinit var chipGroup: ChipGroup
     private lateinit var binding: FragmentNotesBinding
     private val sharedViewModel: SharedViewModel by activityViewModels()
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        //val view = inflater.inflate(R.layout.fragment_tasks, container, false)
         binding = FragmentNotesBinding.inflate(layoutInflater)
         val view = binding.root
         chipGroup = binding.chipGroup
@@ -45,7 +43,6 @@ class NotesFragment : Fragment() {
             val randomColor = generateRandomColor()
             val isDarkColor = isDark(randomColor)
             chip.setTextColor(if (isDarkColor) Color.WHITE else Color.BLACK)
-
             chip.setChipBackgroundColor(generateRandomColorStateList(randomColor))
 
             chip.text = note.title

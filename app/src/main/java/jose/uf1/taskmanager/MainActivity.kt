@@ -18,7 +18,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var navigationView: NavigationView
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -87,7 +86,6 @@ class MainActivity : AppCompatActivity() {
                 navController.navigate(R.id.notesFragment)
             }
         }
-        // Cerrar el DrawerLayout después de manejar la selección del menú lateral
         drawerLayout.closeDrawers()
     }
 }
