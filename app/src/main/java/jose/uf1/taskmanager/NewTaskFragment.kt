@@ -43,9 +43,13 @@ class NewTaskFragment : Fragment() {
                 val newTask = Task(title, description, selectedDeadline)
 
                 saveTaskToFile(requireContext(), newTask)
-                Snackbar.make(binding.root, "Tarea guardada correctamente", Snackbar.LENGTH_SHORT).show()
+                val snackBar = Snackbar.make(binding.root, "Tarea guardada correctamente", Snackbar.LENGTH_SHORT)
+                snackBar.setAnchorView(binding.editTextTitle)
+                snackBar.show()
             } else {
-                Snackbar.make(binding.root, "Por favor, completa todos los campos y selecciona una fecha", Snackbar.LENGTH_SHORT).show()
+                val snackBar = Snackbar.make(binding.root, "Por favor, completa todos los campos y selecciona una fecha", Snackbar.LENGTH_SHORT)
+                snackBar.setAnchorView(binding.editTextTitle)
+                snackBar.show()
             }
         }
 
