@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="jose.uf1.taskmanager.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_choiceFragment"
+            app:destination="@id/choiceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/choiceFragment"
+        android:name="jose.uf1.taskmanager.ChoiceFragment"
+        android:label="ChoiceFragment" >
+        <action
+            android:id="@+id/action_choiceFragment_to_newTaskFragment"
+            app:destination="@id/newTaskFragment" />
+        <action
+            android:id="@+id/action_choiceFragment_to_tasksFragment2"
+            app:destination="@id/tasksFragment" />
+        <action
+            android:id="@+id/action_choiceFragment_to_newNoteFragment"
+            app:destination="@id/newNoteFragment" />
+        <action
+            android:id="@+id/action_choiceFragment_to_notesFragment"
+            app:destination="@id/notesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newTaskFragment"
+        android:name="jose.uf1.taskmanager.NewTaskFragment"
+        android:label="NewTaskFragment" >
+        <action
+            android:id="@+id/action_newTaskFragment_to_choiceFragment"
+            app:destination="@id/choiceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tasksFragment"
+        android:name="jose.uf1.taskmanager.TasksFragment"
+        android:label="TasksFragment" >
+        <action
+            android:id="@+id/action_tasksFragment_to_showTaskFragment"
+            app:destination="@id/showTaskFragment" />
+        <argument android:name="task" />
+        <action
+            android:id="@+id/action_tasksFragment_to_choiceFragment"
+            app:destination="@id/choiceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showTaskFragment"
+        android:name="jose.uf1.taskmanager.ShowTaskFragment"
+        android:label="fragment_show_task"
+        tools:layout="@layout/fragment_show_task" >
+        <action
+            android:id="@+id/action_showTaskFragment_to_choiceFragment"
+            app:destination="@id/choiceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newNoteFragment"
+        android:name="jose.uf1.taskmanager.NewNoteFragment"
+        android:label="NewNoteFragment" >
+        <action
+            android:id="@+id/action_newNoteFragment_to_choiceFragment"
+            app:destination="@id/choiceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notesFragment"
+        android:name="jose.uf1.taskmanager.NotesFragment"
+        android:label="NotesFragment" >
+        <argument android:name="note" />
+        <action
+            android:id="@+id/action_notesFragment_to_showNotesFragment"
+            app:destination="@id/showNotesFragment" />
+        <action
+            android:id="@+id/action_notesFragment_to_choiceFragment"
+            app:destination="@id/choiceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showNotesFragment"
+        android:name="jose.uf1.taskmanager.ShowNotesFragment"
+        android:label="ShowNotesFragment" >
+        <action
+            android:id="@+id/action_showNotesFragment_to_choiceFragment"
+            app:destination="@id/choiceFragment" />
+    </fragment>
+</navigation>

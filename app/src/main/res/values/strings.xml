@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">TaskManager</string>
+    <string name="task_manager">Task Manager</string>
+    <string name="elige_operaci_n">Elige Operación</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="nueva_nota">Nueva nota</string>
+    <string name="nueva_tarea">Nueva tarea</string>
+    <string name="comenzar">Comenzar</string>
+    <string name="t_tulo_de_la_tarea">Título de la tarea</string>
+    <string name="descripci_n_de_la_tarea">Descripción de la tarea</string>
+    <string name="seleccionar_fecha">Seleccionar fecha</string>
+    <string name="tareas_existentes">Tareas Existentes</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="t_tulo_de_la_nota">Título de la nota</string>
+    <string name="contenido_de_la_nota">Contenido de la nota</string>
+    <string name="notas_existentes">Notas existentes</string>
+    <string name="borrar_nota">Borrar Nota</string>
+    <string name="borrar_tarea">Borrar Tarea</string>
+    <string name="notas">Notas:</string>
+    <string name="tareas_activas">Tareas Activas:</string>
+    <string name="new_task">Nueva Tarea</string>
+    <string name="home">Inicio</string>
+    <string name="new_note">Nueva Nota</string>
+    <string name="inicio_menu">Inicio</string>
+    <string name="acciones_menu">Acciones</string>
+    <string name="mostrar_menu">Mostrar</string>
+    <string name="tareas_menu_lat">Tareas</string>
+    <string name="notas_menu_lat">Notas</string>
+</resources>

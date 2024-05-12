@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/choiceFragment"
+        android:icon="@drawable/homemenu"
+        android:title="@string/home"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/newTaskFragment"
+        android:icon="@drawable/taskmenu"
+        android:title="@string/new_task"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/newNoteFragment"
+        android:icon="@drawable/notemenu"
+        android:title="@string/new_note"
+        app:showAsAction="always"/>
+</menu>
