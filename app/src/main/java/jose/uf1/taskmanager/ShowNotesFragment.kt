@@ -62,6 +62,7 @@ class ShowNotesFragment : Fragment() {
             }
             buttonEdit.setOnClickListener {
                 isEditing = true
+                buttonEdit.visibility = View.GONE
                 editTextDescription.visibility = View.VISIBLE
                 textViewDescription.visibility = View.GONE
                 buttonDelete.visibility = View.INVISIBLE
@@ -77,6 +78,7 @@ class ShowNotesFragment : Fragment() {
                 textViewDescription.visibility = View.VISIBLE
                 buttonDelete.visibility = View.VISIBLE
                 buttonConfirmEdit.visibility = View.GONE
+                buttonEdit.visibility = View.VISIBLE
             }
         }
         return view

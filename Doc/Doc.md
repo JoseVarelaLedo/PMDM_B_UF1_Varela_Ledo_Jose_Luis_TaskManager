@@ -30,7 +30,10 @@ Como se aprecia en la siguiente imagen, correspondiente a los archivos de layout
   ![Notes](06.png)
   E, igualmente, al pinchar en la nota, se abre su contenido (al abrirse un nuevo fragmento *fragment_show_notes.xml*):
   ![Note](06b.png)
-  Igualmente, dispone del botón para borrar nota
+  Igualmente, dispone del botón para borrar nota, pero, además, tiene un botón adicional para editar la nota. Las notas, al contrario que las tareas, son editables.
+  ![EditNote](06c.png)
+  Al pulsar sobre el botón de edición, los botones de edición y borrado se ocultan, y aparece en su lugar un botón para confirmar edición.
+
 - **Menú lateral**: desde la actividad principal se ha definido, además del menú inferior, un menú lateral que permite el acceso a las funciones principales:
   ![MenuLat](07.png)
   Dicho menú es deslizable y ocultable.

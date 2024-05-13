@@ -48,19 +48,30 @@
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:layout_marginBottom="8dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
 
-        <Button
-            android:id="@+id/buttonDelete"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/borrar_nota"
-            android:layout_gravity="center|end"/>
-        <Button
-            android:id="@+id/buttonEdit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/editar_nota"
-            android:layout_gravity="center|start"/>
+            <!-- Botón Editar -->
+            <Button
+                android:id="@+id/buttonEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/editar_nota"
+                android:layout_alignParentStart="true"/>
+
+            <!-- Botón Borrar -->
+            <Button
+                android:id="@+id/buttonDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/borrar_nota"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+
+
         <Button
             android:id="@+id/buttonConfirmEdit"
             android:layout_width="wrap_content"
