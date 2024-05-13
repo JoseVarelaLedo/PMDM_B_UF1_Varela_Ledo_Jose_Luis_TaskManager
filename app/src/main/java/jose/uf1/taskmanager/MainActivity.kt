@@ -13,25 +13,32 @@ import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
+import jose.uf1.taskmanager.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var navigationView: NavigationView
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
+        //val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        val toolbar = binding.toolbar
         setSupportActionBar(toolbar)
 
-        drawerLayout = findViewById(R.id.drawer_layout)
-        navigationView = findViewById(R.id.nav_view)
+        //drawerLayout = findViewById(R.id.drawer_layout)
+        drawerLayout = binding.drawerLayout
+        //navigationView = findViewById(R.id.nav_view)
+        navigationView = binding.navView
 
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragment_container_view) as NavHostFragment
         navController = navHostFragment.navController
-        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_nav)
+        //val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_nav)
+        val bottomNavigationView = binding.bottomNav
         bottomNavigationView.setupWithNavController(navController)
 
         bottomNavigationView.setOnItemSelectedListener { menuItem ->
