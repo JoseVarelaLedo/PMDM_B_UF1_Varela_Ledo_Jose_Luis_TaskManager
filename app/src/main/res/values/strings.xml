@@ -26,4 +26,7 @@
     <string name="mostrar_menu">Mostrar</string>
     <string name="tareas_menu_lat">Tareas</string>
     <string name="notas_menu_lat">Notas</string>
+    <string name="editar_nota">Editar Nota</string>
+    <string name="confirmar_edici_n">Confirmar Edición</string>
+    <string name="editar_descripci_n_de_la_nota">Editar descripción de la nota</string>
 </resources>

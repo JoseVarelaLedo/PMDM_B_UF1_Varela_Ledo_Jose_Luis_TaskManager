@@ -30,10 +30,10 @@ class NewNoteFragment : Fragment() {
 
         binding.confirmButton.setOnClickListener {
             val title = binding.editTextTitle.text.toString()
-            val description = binding.editTextDescription.text.toString()
+            var description = binding.editTextDescription.text.toString()
 
             if (title.isNotEmpty() && description.isNotEmpty()) {
-                val newNote = Note(title, description)
+                val newNote = Note(title = title, description = description)
 
                 saveNoteToFile(requireContext(), newNote)
                 val snackBar = Snackbar.make(binding.root, "Nota guardada correctamente", Snackbar.LENGTH_SHORT)
