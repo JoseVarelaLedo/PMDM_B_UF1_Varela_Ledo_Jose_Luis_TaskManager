@@ -32,13 +32,13 @@ class MainActivity : AppCompatActivity() {
 
         //drawerLayout = findViewById(R.id.drawer_layout)
         drawerLayout = binding.drawerLayout
-        //navigationView = findViewById(R.id.nav_view)
-        navigationView = binding.navView
+        navigationView = findViewById(R.id.nav_view)
+        //navigationView = binding.navView
 
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragment_container_view) as NavHostFragment
         navController = navHostFragment.navController
-        //val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_nav)
-        val bottomNavigationView = binding.bottomNav
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_nav)
+        //val bottomNavigationView = binding.bottomNav
         bottomNavigationView.setupWithNavController(navController)
 
         bottomNavigationView.setOnItemSelectedListener { menuItem ->
