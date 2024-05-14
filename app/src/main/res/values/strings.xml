@@ -28,5 +28,7 @@
     <string name="notas_menu_lat">Notas</string>
     <string name="editar_nota">Editar Nota</string>
     <string name="confirmar_edici_n">Confirmar Edición</string>
-    <string name="editar_descripci_n_de_la_nota">Editar descripción de la nota</string>
+    <string name="editar_descripci_n_de_la_nota">Editar contenido de la nota</string>
+    <string name="pulsa_en_cualquier_nota_para_visualizar_su_contenido">Pulsa en cualquier nota para visualizar su contenido.</string>
+    <string name="pulsa_en_cualquier_tarea_para_visualizar_su_contenido">Pulsa en cualquier tarea para visualizar su contenido.</string>
 </resources>

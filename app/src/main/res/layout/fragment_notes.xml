@@ -56,14 +56,27 @@
             android:fillViewport="true"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
             >
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/notas"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="30sp"
-                android:textAppearance="@color/cardview_light_background"/>
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/notas"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="30sp"
+                    android:textAppearance="@color/cardview_light_background"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pulsa_en_cualquier_nota_para_visualizar_su_contenido"
+                    android:textColor="@color/black"
+                    android:textStyle="italic"
+                    android:textSize="15sp"
+                    android:textAppearance="@color/cardview_light_background"/>
+            </LinearLayout>
         </androidx.core.widget.NestedScrollView>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
     <androidx.core.widget.NestedScrollView

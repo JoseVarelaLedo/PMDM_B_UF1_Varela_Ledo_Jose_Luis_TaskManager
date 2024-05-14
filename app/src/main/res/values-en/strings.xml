@@ -26,4 +26,9 @@
     <string name="mostrar_menu">Show</string>
     <string name="tareas_menu_lat">Tasks</string>
     <string name="notas_menu_lat">Notes</string>
+    <string name="editar_nota">Edit Note</string>
+    <string name="confirmar_edici_n">Confirm Edition</string>
+    <string name="editar_descripci_n_de_la_nota">Edit note content</string>
+    <string name="pulsa_en_cualquier_nota_para_visualizar_su_contenido">Click any note to visualize its content.</string>
+    <string name="pulsa_en_cualquier_tarea_para_visualizar_su_contenido">Click any task to visualize its content.</string>
 </resources>
