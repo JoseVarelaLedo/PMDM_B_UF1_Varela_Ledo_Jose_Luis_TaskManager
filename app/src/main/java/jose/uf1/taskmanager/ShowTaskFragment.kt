@@ -55,7 +55,10 @@ class ShowTaskFragment : Fragment() {
                 val taskToDelete = sharedViewModel.selectedTask.value
                 if (taskToDelete != null) {
                     deleteTask(requireContext(), taskToDelete)
-                    Snackbar.make(binding.root, "Tarea eliminada correctamente", Snackbar.LENGTH_SHORT).show()
+                    val snackBar = Snackbar.make(binding.root, "Tarea eliminada correctamente", Snackbar.LENGTH_SHORT)
+                    snackBar.setAnchorView(btnHome)
+                    snackBar.show()
+                    view.findNavController().navigate(R.id.action_showTaskFragment_to_tasksFragment)
                 }
             }
         }

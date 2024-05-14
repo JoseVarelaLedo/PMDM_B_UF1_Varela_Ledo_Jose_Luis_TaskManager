@@ -57,7 +57,10 @@ class ShowNotesFragment : Fragment() {
                 val noteToDelete = sharedViewModel.selectedNote.value
                 if (noteToDelete != null) {
                     deleteNote(requireContext(), noteToDelete)
-                    Snackbar.make(binding.root, "Nota eliminada correctamente", Snackbar.LENGTH_SHORT).show()
+                    val snackBar = Snackbar.make(binding.root, "Nota eliminada correctamente", Snackbar.LENGTH_SHORT)
+                    snackBar.setAnchorView(btnHome)
+                    snackBar.show()
+                    view.findNavController().navigate(R.id.action_showNotesFragment_to_notesFragment)
                 }
             }
             buttonEdit.setOnClickListener {
