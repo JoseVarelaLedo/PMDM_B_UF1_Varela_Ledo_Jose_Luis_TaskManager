@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
+import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
 import jose.uf1.taskmanager.databinding.FragmentTasksBinding
@@ -34,6 +35,7 @@ class TasksFragment : Fragment() {
         binding = FragmentTasksBinding.inflate(layoutInflater)
         val view = binding.root
         val btnHome = binding.fab
+
         btnHome.setOnClickListener{
             view.findNavController().navigate(R.id.action_tasksFragment_to_choiceFragment)
         }

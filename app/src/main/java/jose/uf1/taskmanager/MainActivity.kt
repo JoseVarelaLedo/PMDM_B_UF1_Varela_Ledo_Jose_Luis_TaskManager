@@ -39,16 +39,13 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFragment.navController
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_nav)
         //val bottomNavigationView = binding.bottomNav
-        bottomNavigationView.setupWithNavController(navController)
 
-        bottomNavigationView.setOnItemSelectedListener { menuItem ->
-            handleBottomNavigation(menuItem)
-        }
-
-        navigationView.setNavigationItemSelectedListener { menuItem ->
+        /*navigationView.setNavigationItemSelectedListener { menuItem ->
             handleSideNavigation(menuItem)
             true
-        }
+        }*/
+        navigationView.setupWithNavController(navController)
+        bottomNavigationView.setupWithNavController(navController)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.fragment_container_view)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -56,43 +53,5 @@ class MainActivity : AppCompatActivity() {
             insets
         }
     }
-    private fun handleBottomNavigation(menuItem: MenuItem): Boolean {
-        when (menuItem.itemId) {
-            R.id.choiceFragment -> {
-                navController.navigate(R.id.choiceFragment)
-                return true
-            }
-            R.id.newTaskFragment -> {
-                navController.navigate(R.id.newTaskFragment)
-                return true
-            }
-            R.id.newNoteFragment -> {
-                navController.navigate(R.id.newNoteFragment)
-                return true
-            }
-            else -> return false
-        }
-    }
-    private fun handleSideNavigation(menuItem: MenuItem) {
-        when (menuItem.itemId) {
-            R.id.choiceFragment -> {
-                navController.navigate(R.id.choiceFragment)
 
-            }
-            R.id.newTaskFragment -> {
-                navController.navigate(R.id.newTaskFragment)
-
-            }
-            R.id.newNoteFragment -> {
-                navController.navigate(R.id.newNoteFragment)
-            }
-            R.id.tasksFragment -> {
-                navController.navigate(R.id.tasksFragment)
-            }
-            R.id.notesFragment -> {
-                navController.navigate(R.id.notesFragment)
-            }
-        }
-        drawerLayout.closeDrawers()
-    }
 }
